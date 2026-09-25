@@ -4,10 +4,15 @@ import java.util.Date;
 public class Academic_Terms {
 
     private UUID id;
-    private UUID code;
+    private String code;
     private String name;
     private String academicYear;
-    private String semester;
+    private enum semester {
+        FALL,
+        SPRING,
+        SUMMER
+    }
+    private semester semester;
     private Date startDate;
     private Date endDate;
     private Date registrationStartDate;
@@ -16,7 +21,7 @@ public class Academic_Terms {
     private boolean isActive;
 
 
-    public Academic_Terms(UUID id,UUID code, String name,String academicYear,String semester,Date registrationStartDate, Date registrationEndDate, Date addDropEndDate, Date startDate, Date endDate, boolean isActive) {
+    public Academic_Terms(UUID id,String code, String name,String academicYear,semester semester,Date registrationStartDate, Date registrationEndDate, Date addDropEndDate, Date startDate, Date endDate, boolean isActive) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -37,10 +42,10 @@ public class Academic_Terms {
         this.id = id;
     }
 
-    public UUID getCode() {
+    public String getCode() {
         return code;
     }
-    public void setCode(UUID code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -58,10 +63,10 @@ public class Academic_Terms {
         this.academicYear = academicYear;
     }
 
-    public String getSemester() {
+    public semester getSemester() {
         return semester;
     }
-    public void setSemester(String semester) {
+    public void setSemester(semester semester) {
         this.semester = semester;
     }
 

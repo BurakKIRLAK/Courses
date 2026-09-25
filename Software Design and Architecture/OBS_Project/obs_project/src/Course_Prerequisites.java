@@ -10,10 +10,11 @@ public class Course_Prerequisites {
     private String minimumGrade;
 
 
-    public Course_Prerequisites(UUID id, UUID courseId, UUID prerequisiteCourseId, String minimumGrade) {
+    public Course_Prerequisites(UUID id, UUID courseId, UUID prerequisiteCourseId,prerequisiteType type,String minimumGrade) {
         this.id = id;
         this.courseId = courseId;
         this.prerequisiteCourseId = prerequisiteCourseId;
+        this.type = type;
         this.minimumGrade = minimumGrade;
     }
 

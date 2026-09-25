@@ -10,11 +10,12 @@ public class Program_Courses {
     private courseType type;
     private boolean isActive;
 
-    public Program_Courses(UUID id, UUID programId, UUID courseId, int semesterOrder, boolean isActive) {
+    public Program_Courses(UUID id, UUID programId, UUID courseId, int semesterOrder,courseType type, boolean isActive) {
         this.id = id;
         this.programId = programId;
         this.courseId = courseId;
         this.semesterOrder = semesterOrder;
+        this.type = type;
         this.isActive = isActive;
     }
 

@@ -10,9 +10,9 @@ public class Courses {
     private int theoryHours;
     private int labHours;
     private enum courseType {
-        THEORETICAL,
-        PRACTICAL,
-        MIXED
+        COMPULSORY,
+        ELECTIVE,
+        MAIN_FIELD
     }
     private courseType courseType;
     private String language;

@@ -10,9 +10,12 @@ public class Instructors {
     private String email;
     private UUID departmentId;
     private enum title {
+        LECTURER,
+        DOCTOR,
+        ASSISTANT_PROFESSOR ,
+        ASSOCIATE_PROFESSOR,
         PROFESSOR,
-        ASSISTANT_PROFESSOR,
-        LECTURER
+        PROFESSOR_DOCTOR
     }
     private title title;
     private String specialization;

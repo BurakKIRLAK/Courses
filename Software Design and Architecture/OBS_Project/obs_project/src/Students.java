@@ -23,7 +23,9 @@ public class Students {
     private int classYear;
     private enum status{
         ACTIVE,
-        INACTIVE
+        GRADUATED,
+        SUSPENDED,
+        LEFT
     };
     private status status;
     private String photoURL;

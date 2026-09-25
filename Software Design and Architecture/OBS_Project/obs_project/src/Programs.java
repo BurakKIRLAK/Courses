@@ -8,6 +8,7 @@ public class Programs {
     private String name;
     private UUID departmentId;
     private enum degreeLevel{
+        ASSOCIATE,
         BACHELOR,
         MASTER,
         DOCTORATE
@@ -18,7 +19,7 @@ public class Programs {
     private String language;
     private boolean isActive;
 
-    public Programs(UUID id, String code, String name, UUID departmentId, degreeLevel degreeLevel, int totalCredits, int durationYears, boolean isActive) {
+    public Programs(UUID id, String code, String name, UUID departmentId, degreeLevel degreeLevel, int totalCredits, int durationYears,String language, boolean isActive) {
 
         this.id = id;
         this.code = code;
@@ -27,6 +28,7 @@ public class Programs {
         this.degreeLevel =  degreeLevel;
         this.totalCredits = totalCredits;
         this.durationYears = durationYears;
+        this.language = language;
         this.isActive = isActive;
     }
 
@@ -93,6 +95,7 @@ public class Programs {
     public void setLanguage(String language) {
         this.language = language;
     }
+
 
     public boolean isActive() {
         return isActive;
