@@ -2,17 +2,17 @@ import java.util.UUID;
 import java.time.LocalDateTime;
 
 public class Faculties {
-    // 1. Private alanlar (camelCase)
+    
     private UUID id;
     private String code;
     private String name;
-    private UUID deanId; // FK (Foreign Key) referansı
+    private UUID deanId; 
     private String phone;
     private String email;
     private boolean isActive;
     private LocalDateTime createdAt;
 
-    // 2. Kurucu Metot (Constructor)
+    
     public Faculties(UUID id, String code, String name, UUID deanId, String phone, String email, boolean isActive, LocalDateTime createdAt) {
         this.id = id;
         this.code = code;
@@ -24,7 +24,7 @@ public class Faculties {
         this.createdAt = createdAt;
     }
 
-    // 3. Getter ve Setter Metotları
+    
     public UUID getId() {
         return id;
     }
@@ -89,18 +89,4 @@ public class Faculties {
         this.createdAt = createdAt;
     }
 
-    // 4. toString() metodunun ezilmesi (Override)
-    @Override
-    public String toString() {
-        return "Faculties{" +
-                "id=" + id +
-                ", code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", deanId=" + deanId +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", isActive=" + isActive +
-                ", createdAt=" + createdAt +
-                '}';
-    }
 }

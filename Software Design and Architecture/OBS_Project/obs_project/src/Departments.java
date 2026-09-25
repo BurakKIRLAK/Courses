@@ -12,7 +12,7 @@ public class Departments {
     private boolean isActive;
 
 
-    public Departments(UUID id, String code, String name, UUID facultyId, UUID headInstructorId, String phoneNumber, String emailAddress, boolean isActive) {
+    public Departments(UUID id, String code, String name, UUID facultyId, UUID headInstructorId, String phone, String email, boolean isActive) {
 
         this.id = id;
         this.code = code;
@@ -88,17 +88,5 @@ public class Departments {
         this.isActive = isActive;
     }
 
-    @Override
-    public String toString() {
-        return "Departments{" +
-                "id=" + id +
-                ", code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", facultyId=" + facultyId +
-                ", headInstructorId=" + headInstructorId +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", isActive=" + isActive +
-                '}';
-    }
+
 }
