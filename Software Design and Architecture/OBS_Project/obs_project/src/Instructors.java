@@ -14,8 +14,7 @@ public class Instructors {
         DOCTOR,
         ASSISTANT_PROFESSOR ,
         ASSOCIATE_PROFESSOR,
-        PROFESSOR,
-        PROFESSOR_DOCTOR
+        PROFESSOR
     }
     private title title;
     private String specialization;
