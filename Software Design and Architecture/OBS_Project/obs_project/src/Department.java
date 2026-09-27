@@ -1,6 +1,6 @@
 import java.util.UUID;
 
-public class Departments {
+public class Department {
 
     private UUID id;
     private String code;
@@ -12,7 +12,7 @@ public class Departments {
     private boolean isActive;
 
 
-    public Departments(UUID id, String code, String name, UUID facultyId, UUID headInstructorId, String phone, String email, boolean isActive) {
+    public Department(UUID id, String code, String name, UUID facultyId, UUID headInstructorId, String phone, String email, boolean isActive) {
 
         this.id = id;
         this.code = code;
@@ -90,7 +90,7 @@ public class Departments {
 
     @Override 
     public String toString() {
-        return "Departments{" +
+        return "Department{" +
                 "id=" + id +
                 ", code='" + code + '\'' +
                 ", name='" + name + '\'' +

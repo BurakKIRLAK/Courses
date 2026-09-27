@@ -1,7 +1,7 @@
 import java.util.UUID;
 import java.time.LocalDateTime;
 
-public class Faculties {
+public class Faculty {
     
     private UUID id;
     private String code;
@@ -13,7 +13,7 @@ public class Faculties {
     private LocalDateTime createdAt;
 
     
-    public Faculties(UUID id, String code, String name, UUID deanId, String phone, String email, boolean isActive, LocalDateTime createdAt) {
+    public Faculty(UUID id, String code, String name, UUID deanId, String phone, String email, boolean isActive, LocalDateTime createdAt) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -92,7 +92,7 @@ public class Faculties {
 
     @Override 
     public String toString() {
-        return "Faculties{" +
+        return "Faculty{" +
                 "id=" + id +
                 ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
