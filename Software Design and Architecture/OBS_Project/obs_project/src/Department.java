@@ -1,30 +1,29 @@
 import java.util.UUID;
-import java.time.LocalDateTime;
 
-public class Faculties {
-    
+public class Departments {
+
     private UUID id;
     private String code;
     private String name;
-    private UUID deanId; 
+    private UUID facultyId;
+    private UUID headInstructorId;
     private String phone;
     private String email;
     private boolean isActive;
-    private LocalDateTime createdAt;
 
-    
-    public Faculties(UUID id, String code, String name, UUID deanId, String phone, String email, boolean isActive, LocalDateTime createdAt) {
+
+    public Departments(UUID id, String code, String name, UUID facultyId, UUID headInstructorId, String phone, String email, boolean isActive) {
+
         this.id = id;
         this.code = code;
         this.name = name;
-        this.deanId = deanId;
+        this.facultyId = facultyId;
+        this.headInstructorId = headInstructorId;
         this.phone = phone;
         this.email = email;
         this.isActive = isActive;
-        this.createdAt = createdAt;
     }
 
-    
     public UUID getId() {
         return id;
     }
@@ -49,12 +48,20 @@ public class Faculties {
         this.name = name;
     }
 
-    public UUID getDeanId() {
-        return deanId;
+    public UUID getfacultyId() {
+        return facultyId;
     }
 
-    public void setDeanId(UUID deanId) {
-        this.deanId = deanId;
+    public void setfacultyId(UUID facultyId) {
+        this.facultyId = facultyId;
+    }
+
+    public UUID getheadInstructorId() {
+        return headInstructorId;
+    }
+
+    public void setheadInstructorId(UUID headInstructorId) {
+        this.headInstructorId = headInstructorId;
     }
 
     public String getPhone() {
@@ -81,12 +88,19 @@ public class Faculties {
         this.isActive = isActive;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    @Override 
+    public String toString() {
+        return "Departments{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", facultyId=" + facultyId +
+                ", headInstructorId=" + headInstructorId +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", isActive=" + isActive +
+                '}';
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 
 }

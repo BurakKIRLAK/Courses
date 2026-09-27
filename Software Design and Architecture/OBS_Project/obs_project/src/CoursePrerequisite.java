@@ -1,16 +1,16 @@
 import java.util.UUID;
 
-public class Course_Prerequisites {
+public class CoursePrerequisite {
 
     private UUID id;
     private UUID courseId;
     private UUID prerequisiteCourseId;
-    private enum prerequisiteType {MANDATORY, OPTIONAL};
-    private prerequisiteType type;
+    public enum PrerequisiteType {MANDATORY, OPTIONAL};
+    private PrerequisiteType type;
     private String minimumGrade;
 
 
-    public Course_Prerequisites(UUID id, UUID courseId, UUID prerequisiteCourseId,prerequisiteType type,String minimumGrade) {
+    public CoursePrerequisite(UUID id, UUID courseId, UUID prerequisiteCourseId,PrerequisiteType type,String minimumGrade) {
         this.id = id;
         this.courseId = courseId;
         this.prerequisiteCourseId = prerequisiteCourseId;
@@ -46,11 +46,22 @@ public class Course_Prerequisites {
         this.minimumGrade = minimumGrade;
     }
 
-    public prerequisiteType getType() {
+    public PrerequisiteType getType() {
         return type;
     }
-    public void setType(prerequisiteType type) {
+    public void setType(PrerequisiteType type) {
         this.type = type;
+    }
+
+    @Override 
+    public String toString() {
+        return "Course_Prerequisites{" +
+                "id=" + id +
+                ", courseId=" + courseId +
+                ", prerequisiteCourseId=" + prerequisiteCourseId +
+                ", type=" + type +
+                ", minimumGrade='" + minimumGrade + '\'' +
+                '}';
     }
 
 }

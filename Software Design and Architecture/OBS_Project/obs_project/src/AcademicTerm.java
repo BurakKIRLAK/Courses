@@ -1,18 +1,18 @@
 import java.util.UUID;
 import java.util.Date;
 
-public class Academic_Terms {
+public class AcademicTerm {
 
     private UUID id;
     private String code;
     private String name;
     private String academicYear;
-    private enum semester {
+    public enum Semester {
         FALL,
         SPRING,
         SUMMER
     }
-    private semester semester;
+    private Semester semester;
     private Date startDate;
     private Date endDate;
     private Date registrationStartDate;
@@ -21,7 +21,7 @@ public class Academic_Terms {
     private boolean isActive;
 
 
-    public Academic_Terms(UUID id,String code, String name,String academicYear,semester semester,Date registrationStartDate, Date registrationEndDate, Date addDropEndDate, Date startDate, Date endDate, boolean isActive) {
+    public AcademicTerm(UUID id,String code, String name,String academicYear,Semester semester,Date registrationStartDate, Date registrationEndDate, Date addDropEndDate, Date startDate, Date endDate, boolean isActive) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -63,10 +63,10 @@ public class Academic_Terms {
         this.academicYear = academicYear;
     }
 
-    public semester getSemester() {
+    public Semester getSemester() {
         return semester;
     }
-    public void setSemester(semester semester) {
+    public void setSemester(Semester semester) {
         this.semester = semester;
     }
 
@@ -112,4 +112,15 @@ public class Academic_Terms {
     public void setActive(boolean isActive) {
         this.isActive = isActive;
     }
+
+    @Override 
+    public String toString() {
+        return "Academic_Terms [id=" + id + ", code=" + code + ", name=" + name + ", academicYear=" + academicYear
+                + ", semester=" + semester + ", startDate=" + startDate + ", endDate=" + endDate
+                + ", registrationStartDate=" + registrationStartDate + ", registrationEndDate=" + registrationEndDate
+                + ", addDropEndDate=" + addDropEndDate + ", isActive=" + isActive + "]";
+    }
+
+
 }
+

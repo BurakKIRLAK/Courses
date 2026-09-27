@@ -1,16 +1,16 @@
 import java.util.UUID;
 
-public class Program_Courses {
+public class ProgramCourse {
 
     private UUID id;
     private UUID programId;
     private UUID courseId;
     private int semesterOrder;
-    private enum courseType {CORE, ELECTIVE};
-    private courseType type;
+    public enum CourseType {CORE, ELECTIVE};
+    private CourseType type;
     private boolean isActive;
 
-    public Program_Courses(UUID id, UUID programId, UUID courseId, int semesterOrder,courseType type, boolean isActive) {
+    public ProgramCourse(UUID id, UUID programId, UUID courseId, int semesterOrder,CourseType type, boolean isActive) {
         this.id = id;
         this.programId = programId;
         this.courseId = courseId;
@@ -47,10 +47,10 @@ public class Program_Courses {
         this.semesterOrder = semesterOrder;
     }
 
-    public courseType getType() {
+    public CourseType getType() {
         return type;
     }
-    public void setType(courseType type) {
+    public void setType(CourseType type) {
         this.type = type;
     }
 
@@ -59,6 +59,19 @@ public class Program_Courses {
     }
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+
+    @Override 
+    public String toString() {
+        return "ProgramCourse{" +
+                "id=" + id +
+                ", programId=" + programId +
+                ", courseId=" + courseId +
+                ", semesterOrder=" + semesterOrder +
+                ", type=" + type +
+                ", isActive=" + isActive +
+                '}';
     }
 
     

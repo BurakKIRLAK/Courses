@@ -3,37 +3,37 @@ import java.util.UUID;
 import java.time.LocalDateTime;
 
 
-public class Students {
+public class Student {
     private UUID id;
     private String studentNo;
     private String nationalId;
     private String firstName;
     private String lastName;
     private Date birthDate;
-    private enum gender{
+    public enum Gender{
         MALE,
         FEMALE
     };
-    private gender gender;
+    private Gender gender;
     private String eMail;
     private String phone;
     private String address;
     private UUID programId;
     private int enrollmentYear;
     private int classYear;
-    private enum status{
+    public enum Status{
         ACTIVE,
         GRADUATED,
         SUSPENDED,
         LEFT
     };
-    private status status;
+    private Status status;
     private String photoURL;
     private LocalDateTime createdAt;
 
 
-    public Students(UUID id,String studentNo,String nationalId, String firstName, String lastName, Date birthDate, gender gender, String eMail, String phone, String address,UUID programId,
-                    int enrollmentYear,int classYear, status status,String photoURL,LocalDateTime createdAt ) {
+    public Student(UUID id,String studentNo,String nationalId, String firstName, String lastName, Date birthDate, Gender gender, String eMail, String phone, String address,UUID programId,
+                    int enrollmentYear,int classYear, Status status,String photoURL,LocalDateTime createdAt ) {
 
         this.id = id;
         this.studentNo = studentNo;
@@ -100,10 +100,10 @@ public class Students {
     }
 
 
-    public gender getGender() {
+    public Gender getGender() {
         return gender;
     }
-    public void setGender(gender gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -155,10 +155,10 @@ public class Students {
         this.classYear = classYear;
     }
 
-    public status getStatus() {
+    public Status getStatus() {
         return status;
     }
-    public void setStatus(status status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -177,6 +177,29 @@ public class Students {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+
+    @Override 
+    public String toString() {
+        return "Students{" +
+                "id=" + id +
+                ", studentNo='" + studentNo + '\'' +
+                ", nationalId='" + nationalId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                ", gender=" + gender +
+                ", eMail='" + eMail + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", programId=" + programId +
+                ", enrollmentYear=" + enrollmentYear +
+                ", classYear=" + classYear +
+                ", status=" + status +
+                ", photoURL='" + photoURL + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
+    }
+    
 
 
 }

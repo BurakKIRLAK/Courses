@@ -1,25 +1,25 @@
 
 import java.util.UUID;
 
-public class Programs {
+public class Program {
 
     private UUID id;
     private String code;
     private String name;
     private UUID departmentId;
-    private enum degreeLevel{
+    public enum DegreeLevel{
         ASSOCIATE,
         BACHELOR,
         MASTER,
         DOCTORATE
     };
-    private degreeLevel degreeLevel;
+    private DegreeLevel degreeLevel;
     private int totalCredits;
     private int durationYears;
     private String language;
     private boolean isActive;
 
-    public Programs(UUID id, String code, String name, UUID departmentId, degreeLevel degreeLevel, int totalCredits, int durationYears,String language, boolean isActive) {
+    public Program(UUID id, String code, String name, UUID departmentId, DegreeLevel degreeLevel, int totalCredits, int durationYears,String language, boolean isActive) {
 
         this.id = id;
         this.code = code;
@@ -64,11 +64,11 @@ public class Programs {
         this.departmentId = departmentId;
     }
 
-    public degreeLevel getDegreeLevel() {
+    public DegreeLevel getDegreeLevel() {
         return degreeLevel;
     }
 
-    public void setDegreeLevel(degreeLevel degreeLevel) {
+    public void setDegreeLevel(DegreeLevel degreeLevel) {
         this.degreeLevel = degreeLevel;
     }
 
@@ -103,6 +103,22 @@ public class Programs {
 
     public void setActive(boolean isActive) {
         this.isActive = isActive;
+    }
+
+
+    @Override 
+    public String toString() {
+        return "Programs{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", departmentId=" + departmentId +
+                ", degreeLevel=" + degreeLevel +
+                ", totalCredits=" + totalCredits +
+                ", durationYears=" + durationYears +
+                ", language='" + language + '\'' +
+                ", isActive=" + isActive +
+                '}';
     }
 
 }

@@ -1,29 +1,30 @@
 import java.util.UUID;
+import java.time.LocalDateTime;
 
-public class Departments {
-
+public class Faculties {
+    
     private UUID id;
     private String code;
     private String name;
-    private UUID facultyId;
-    private UUID headInstructorId;
+    private UUID deanId; 
     private String phone;
     private String email;
     private boolean isActive;
+    private LocalDateTime createdAt;
 
-
-    public Departments(UUID id, String code, String name, UUID facultyId, UUID headInstructorId, String phone, String email, boolean isActive) {
-
+    
+    public Faculties(UUID id, String code, String name, UUID deanId, String phone, String email, boolean isActive, LocalDateTime createdAt) {
         this.id = id;
         this.code = code;
         this.name = name;
-        this.facultyId = facultyId;
-        this.headInstructorId = headInstructorId;
+        this.deanId = deanId;
         this.phone = phone;
         this.email = email;
         this.isActive = isActive;
+        this.createdAt = createdAt;
     }
 
+    
     public UUID getId() {
         return id;
     }
@@ -48,20 +49,12 @@ public class Departments {
         this.name = name;
     }
 
-    public UUID getfacultyId() {
-        return facultyId;
+    public UUID getDeanId() {
+        return deanId;
     }
 
-    public void setfacultyId(UUID facultyId) {
-        this.facultyId = facultyId;
-    }
-
-    public UUID getheadInstructorId() {
-        return headInstructorId;
-    }
-
-    public void setheadInstructorId(UUID headInstructorId) {
-        this.headInstructorId = headInstructorId;
+    public void setDeanId(UUID deanId) {
+        this.deanId = deanId;
     }
 
     public String getPhone() {
@@ -88,5 +81,27 @@ public class Departments {
         this.isActive = isActive;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
+    @Override 
+    public String toString() {
+        return "Faculties{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", deanId=" + deanId +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", isActive=" + isActive +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 
 }

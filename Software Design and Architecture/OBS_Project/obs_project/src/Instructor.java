@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.UUID;
 
-public class Instructors {
+public class Instructor {
     private UUID id;
     private String employeeNo;
     private String nationalId;
@@ -9,19 +9,19 @@ public class Instructors {
     private String lastName;
     private String email;
     private UUID departmentId;
-    private enum title {
+    public enum Title {
         LECTURER,
         DOCTOR,
         ASSISTANT_PROFESSOR ,
         ASSOCIATE_PROFESSOR,
         PROFESSOR
     }
-    private title title;
+    private Title title;
     private String specialization;
     private Date hireDate;
     private boolean isActive;
 
-    public Instructors(UUID id,String employeeNo,String nationalId,String firstName,String lastName,String email,UUID departmentId,title title,String specialization,Date hireDate,boolean isActive) {
+    public Instructor(UUID id,String employeeNo,String nationalId,String firstName,String lastName,String email,UUID departmentId,Title title,String specialization,Date hireDate,boolean isActive) {
         this.id = id;
         this.employeeNo = employeeNo;
         this.nationalId = nationalId;
@@ -91,10 +91,10 @@ public class Instructors {
     }
 
 
-    public title getTitle() {
+    public Title getTitle() {
         return title;
     }
-    public void setTitle(title title) {
+    public void setTitle(Title title) {
         this.title = title;
     }
 
@@ -121,4 +121,24 @@ public class Instructors {
     public void setActive(boolean active) {
         isActive = active;
     }
+
+
+
+    @Override 
+    public String toString() {
+        return "Instructors{" +
+                "id=" + id +
+                ", employeeNo='" + employeeNo + '\'' +
+                ", nationalId='" + nationalId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", departmentId=" + departmentId +
+                ", title=" + title +
+                ", specialization='" + specialization + '\'' +
+                ", hireDate=" + hireDate +
+                ", isActive=" + isActive +
+                '}';
+    }
+    
 }

@@ -1,7 +1,7 @@
 
 import java.util.UUID;
 
-public class Courses {
+public class Course {
     private UUID id;
     private String  code;
     private String name;
@@ -9,18 +9,18 @@ public class Courses {
     private int credits;
     private int theoryHours;
     private int labHours;
-    private enum courseType {
+    public enum CourseType {
         COMPULSORY,
         ELECTIVE,
         MAIN_FIELD
     }
-    private courseType courseType;
+    private CourseType courseType;
     private String language;
     private String description;
     private boolean isActive;
 
 
-    public Courses(UUID id,String  code,String name,UUID departmentId,int credits,int theoryHours,int labHours,courseType courseType,String language,String description,boolean isActive) {
+    public Course(UUID id,String  code,String name,UUID departmentId,int credits,int theoryHours,int labHours,CourseType courseType,String language,String description,boolean isActive) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -83,10 +83,10 @@ public class Courses {
         this.labHours = labHours;
     }
 
-    public courseType getCourseType() {
+    public CourseType getCourseType() {
         return courseType;
     }
-    public void setCourseType(courseType courseType) {
+    public void setCourseType(CourseType courseType) {
         this.courseType = courseType;
     }
 
@@ -109,6 +109,23 @@ public class Courses {
     }
     public void setActive(boolean isActive) {
         this.isActive = isActive;
+    }
+
+    @Override 
+    public String toString() {
+        return "Courses{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", departmentId=" + departmentId +
+                ", credits=" + credits +
+                ", theoryHours=" + theoryHours +
+                ", labHours=" + labHours +
+                ", courseType=" + courseType +
+                ", language='" + language + '\'' +
+                ", description='" + description + '\'' +
+                ", isActive=" + isActive +
+                '}';
     }
 
 
