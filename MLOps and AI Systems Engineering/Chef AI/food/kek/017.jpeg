@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="/aa3368e17ed25b08fa1afcf993d967be5cdb4955.css?meteor_css_resource=true">
+<title>Divan Pastaneleri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Default consent for Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'denied',
+      security_storage: 'granted'
+    });
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j,
+            f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KKBBCPZ');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Cloudflare Turnstile -->
+  <script>
+    window.__onTurnstileSuccess = function(token) { window.__turnstileToken = token; };
+    window.__onTurnstileExpired = function() { window.__turnstileToken = null; };
+    window.__onTurnstileLoad = function() { window.dispatchEvent(new Event('turnstile:ready')); };
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=__onTurnstileLoad" async defer></script>
+
+</head>
+<body><!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKBBCPZ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="react-target"></div>
+  <script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%402.15%22%2C%22gitCommitHash%22%3A%226e4e533e1bdaba7ee23faac46e754db3b339fca1%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22production%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%22API_URL%22%3A%22https%3A%2F%2Fweb-api.divanpastaneleri.com.tr%22%2C%22WEB_URL%22%3A%22https%3A%2F%2Fwww.divanpastaneleri.com.tr%22%2C%22WSS_URL%22%3A%22wss%3A%2F%2Fweb-api.divanpastaneleri.com.tr%22%2C%22DIVAN_PROFILE_URL%22%3A%22https%3A%2F%2Fhesabim.divanlife.com.tr%22%2C%22DIVAN_LIFE_URL%22%3A%22https%3A%2F%2Fhesabim.divanlife.com.tr%22%2C%22TURNSTILE_SITE_KEY%22%3A%220x4AAAAAAEP5tGgoYqx05Qpr%22%7D%2C%22ROOT_URL%22%3A%22https%3A%2F%2Fwww.divanpastaneleri.com.tr%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22reactFastRefreshEnabled%22%3Atrue%2C%22autoupdate%22%3A%7B%22versions%22%3A%7B%22web.browser%22%3A%7B%22version%22%3A%22712be6efd899b8e0b8ed3c9a008fe5cc3038d7c8%22%2C%22versionRefreshable%22%3A%22121d4d0b81195f964e08126c543c6fd5b2402dcf%22%2C%22versionNonRefreshable%22%3A%228d675b57353f4904f7698639f9355288460f15ec%22%2C%22versionReplaceable%22%3A%22a65b73c339fd661d8fc1cc088963a96d4b589825%22%7D%2C%22web.browser.legacy%22%3A%7B%22version%22%3A%22818c3f4749922c5a257b20bc9d64126cdba0a1df%22%2C%22versionRefreshable%22%3A%22121d4d0b81195f964e08126c543c6fd5b2402dcf%22%2C%22versionNonRefreshable%22%3A%2206e21f562fe87fc76d72e5ccf69e86501ec798a0%22%2C%22versionReplaceable%22%3A%22a65b73c339fd661d8fc1cc088963a96d4b589825%22%7D%7D%2C%22autoupdateVersion%22%3Anull%2C%22autoupdateVersionRefreshable%22%3Anull%2C%22autoupdateVersionCordova%22%3Anull%2C%22appId%22%3A%22c2cnymh701c3.ld0g76815p0f%22%7D%2C%22appId%22%3A%22c2cnymh701c3.ld0g76815p0f%22%2C%22isModern%22%3Afalse%7D"))</script>
+
+  <script type="text/javascript" src="/26ab477b05514b679444ba5b76e4b15d15c47ed9.js?meteor_js_resource=true"></script>
+
+
+</body>
+</html>
